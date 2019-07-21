@@ -21,7 +21,11 @@ const forecast = (latitude, longitude, callback) => {
           body.currently.temperature +
           " degress out. There is a " +
           body.currently.precipProbability +
-          "% chance of rain."
+          "% chance of rain. The low for today is " +
+          body.daily.data[0].temperatureMin +
+          " and the high for today is " +
+          body.daily.data[0].temperatureMax +
+          "."
       );
     }
   });
